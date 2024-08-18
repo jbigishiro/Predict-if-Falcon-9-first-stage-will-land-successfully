@@ -78,7 +78,7 @@ def get_pie_scatter(entered_site, entered_slide_range):
     else:
         df4 = filtered_df[filtered_df["Launch Site"] == entered_site]
         df4 = df4[(df4['Payload Mass (kg)'] >= min) & (df4['Payload Mass (kg)'] <= max ) ]
-        fig = px.scatter(df4, x='Payload Mass (kg)', y='class', color='Launch Site', title=f'Correlation between Payload and Success for the site {entered_site}')
+        fig = px.scatter(df4, x='Payload Mass (kg)', y='class', color='Booster Version', title=f'Correlation between Payload and Success for the site {entered_site}')
         return fig
 
 # Run the app
